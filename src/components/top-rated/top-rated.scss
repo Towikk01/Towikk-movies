@@ -1,0 +1,13 @@
+.film-wrapper {
+
+  h1 {
+    color: whitesmoke;
+    text-align: left;
+  }
+
+  @media(max-width:374px) {
+    h1 {
+      text-align: center;
+    }
+  }
+}

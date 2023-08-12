@@ -1,0 +1,14 @@
+.carousel-container {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  gap: 15px;
+  max-width: 1475px;
+  margin: 0 auto;
+
+  @media (min-width:2560px) {
+    max-width: 2000px;
+  }
+}

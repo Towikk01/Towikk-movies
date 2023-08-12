@@ -1,0 +1,11 @@
+.brand {
+  margin-right: 2rem;
+}
+
+.numbers {
+  display: flex;
+  border-radius: 50px;
+  padding: 5px 10px;
+  color: darkgray;
+  transition: .7s;
+}

@@ -1,0 +1,6 @@
+.film-actors-item {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  align-items: center;
+}

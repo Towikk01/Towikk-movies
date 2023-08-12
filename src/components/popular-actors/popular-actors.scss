@@ -1,0 +1,15 @@
+.popular-actors-wrapper {
+  max-width: 60vw;
+  margin: 0 auto;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.popular-actors-list {
+  max-width: 60vw;
+  margin: 0 auto;
+  gap: 1rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
