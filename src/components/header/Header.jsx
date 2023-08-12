@@ -1,14 +1,17 @@
+import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useSelector, useDispatch } from 'react-redux';
+
 import { selectFavoriteFilms, updateSearchText } from '../../redux/filmSlice';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+
 import './header.css'
-import { useEffect, useState } from 'react';
+import GenreMenuNew from '../genre-menu-new/GenreMenuNew';
 
 
 const Header = () => {
@@ -28,6 +31,7 @@ const Header = () => {
     <header >
       <Navbar expand="lg" className="bg" style={{ backgroundColor: 'dimgray', justifyContent: 'space-between', zIndex: '1' }}>
         <Container fluid>
+          <GenreMenuNew />
           <Link className='text-decoration-none' to='/'>
             <Navbar.Brand style={{ marginRight: '4rem', marginLeft: '2rem' }}>Towikk Movies</Navbar.Brand>
           </Link>
