@@ -170,7 +170,7 @@ const HomePage = () => {
             <Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to={`/${film.id}`}>
               <div>
                 <img style={{ width: '10vw', borderRadius: '10px' }} src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.id} />
-                <h5 style={{ paddingTop: '0.5rem' }}>{film.title}</h5>
+                <h5 style={{ paddingTop: '0.5rem', textWrap: 'wrap' }}>{film.title}</h5>
               </div>
             </Link>
           ))}

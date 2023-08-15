@@ -5,6 +5,7 @@ import { setPopularActors, setPopularActorsError, setPopularActorsLoading, selec
 import PopularActorsItem from '../popular-actors-item/PopularActorsItem'
 import Pagination from '../pagination/Pagination'
 import { Spinner } from 'react-bootstrap'
+import logo from '../../assets/qxBTun.jpg'
 
 
 const PopularActors = () => {
@@ -54,6 +55,7 @@ const PopularActors = () => {
 
   return (
     <div className='popular-actors-wrapper'>
+      <img className='demo-bg' src={logo} alt='background' />
       <h1 style={{ color: 'whitesmoke', textAlign: 'left' }}>Popular Actors</h1>
       <div className='popular-actors-list' >
         {actors.map((actor) => <PopularActorsItem key={actor.id} actor={actor} />)}

@@ -10,8 +10,10 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import { selectFavoriteFilms, updateSearchText } from '../../redux/filmSlice';
 
-import './header.css'
+import './header.scss'
 import GenreMenuNew from '../genre-menu-new/GenreMenuNew';
+
+import logo from "../../assets/main-logo.jpeg"
 
 
 const Header = () => {
@@ -29,17 +31,19 @@ const Header = () => {
   }, [dispatch, searchText]);
   return (
     <header >
-      <Navbar expand="lg" className="bg" style={{ backgroundColor: 'dimgray', justifyContent: 'space-between', zIndex: '1' }}>
+      <Navbar expand="lg" className="bg" style={{ backgroundColor: "rgb(210 209 209)", justifyContent: 'space-between', zIndex: '1' }}>
         <Container fluid>
           <GenreMenuNew />
-          <Link className='text-decoration-none' to='/'>
-            <Navbar.Brand style={{ marginRight: '4rem', marginLeft: '2rem' }}>Towikk Movies</Navbar.Brand>
-          </Link>
+          <div className='border-animated'>
+            <Link className='text-decoration-none' to='/'>
+              <Navbar.Brand className='navbar-logo' style={{ marginRight: '4rem', marginLeft: '2rem' }}>Towikk Movies</Navbar.Brand>
+            </Link>
+          </div>
           <Navbar.Collapse id="navbarScroll">
             <Form className="d-flex">
               <Form.Control
                 type="search"
-                placeholder="Search films"
+                placeholder="Search movies"
                 className="me-2"
                 aria-label="Search"
                 value={searchText}
@@ -56,7 +60,7 @@ const Header = () => {
               <Link style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }} to='/favorites'>
                 <Nav.Link style={{ color: "whitesmoke" }} href="#action1">Favorites:
                 </Nav.Link>
-                <span className='numbers' style={{ backgroundColor: fav.length ? '#9fd8ed' : '#2d3d43', color: fav.length ? '#2d3d43' : 'hotpink' }}>{fav.length ? fav.length : 0}</span>
+                <span className='numbers' style={{ backgroundColor: fav.length ? 'rgb(35 165 213)' : '#2d3d43', color: fav.length ? '#2d3d43' : 'hotpink' }}>{fav.length ? fav.length : 0}</span>
               </Link>
             </Nav>
           </Navbar.Collapse>

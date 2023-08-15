@@ -38,7 +38,7 @@ const FilmItem = ({ film }) => {
         </div>
         <div className='d-flex justify-content-between'>
           <Link className='text-decoration-none' to={`/${film.id}`}>
-            <Button variant="primary">Film page</Button>
+            <Button variant="primary">Movie page</Button>
           </Link>
           <Button onClick={handleAddToFavorites} variant={isFilmFav ? 'warning' : 'success'}>
             {isFilmFav ? 'Remove' : "Add"}<AiFillStar />

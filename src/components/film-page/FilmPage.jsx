@@ -106,7 +106,7 @@ const FilmPage = () => {
           <div className='film-genres'>
             {film.genres && film.genres.map(genre =>
               <Link style={{ textDecoration: 'none' }} key={genre.id} to={`/genre/${genre.id}`}>
-                <button key={genre.name} className='film-genres__item'>{genre.name}</button>
+                <button style={{ border: 'none' }} key={genre.name} className='film-genres__item'>{genre.name}</button>
               </Link>
             )}
           </div>
