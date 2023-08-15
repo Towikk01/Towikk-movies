@@ -6,10 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FavoritesList from './components/favorites-list/FavoritesList';
 import FilmPage from './components/film-page/FilmPage';
 import SearchPage from './components/search-page/SearchPage';
-import GenreMenu from './components/genre-menu/GenreMenu';
 import PopularActors from './components/popular-actors/PopularActors';
 import TopRated from './components/top-rated/TopRated';
 import HomePage from './components/home-page/HomePage'
+import GenreList from './components/genre-list/GenreList';
+import ActorPage from './components/actor-page/ActorPage';
 
 
 
@@ -30,6 +31,8 @@ function App() {
           <Route path='/:filmId' element={<FilmPage />} />
           <Route path='/popular-actors' element={<PopularActors />} />
           <Route path='/top-rated' element={<TopRated />} />
+          <Route path="/genre/:genreId" element={<GenreList />} />
+          <Route path="/actor/:personId" element={<ActorPage />} />
         </Routes>
       </div>
     </Router>

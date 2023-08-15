@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import FilmItem from '../film-item/FilmItem'
-import { selectPopularFilmsResult, selectPaginationUrl, selectApiKey, setPopularFilmsResult, setPopularFilmsError, setPopularFilmsLoading, setCurrentPage, selectCurrentPage } from '../../redux/filmSlice'
+import { selectPopularFilmsResult, selectPaginationUrl, selectApiKey, setPopularFilmsResult, setPopularFilmsError, setPopularFilmsLoading, setCurrentPage, selectCurrentPage, setTotalPages } from '../../redux/filmSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import './film-list.scss'
 import Pagination from '../pagination/Pagination'
@@ -24,6 +24,7 @@ const FilmList = () => {
       res.json()
     ).then((res) => {
       dispatch(setPopularFilmsResult(res.results))
+      dispatch(setTotalPages(res.total_pages))
     }).catch(error => {
       dispatch(setPopularFilmsError(true))
     }).finally(() => {

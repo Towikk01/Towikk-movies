@@ -1,0 +1,52 @@
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2rem;
+
+
+  &__carousel {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    gap: 15px;
+    max-width: 1475px;
+    margin: 0 auto;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    gap: 5rem;
+  }
+
+  &__actions {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__title {
+    font-size: 50px;
+    color: whitesmoke;
+  }
+
+  &__details {
+    color: rgb(235, 217, 217)
+  }
+
+
+  &__img {
+    width: 400px;
+    height: 400px;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

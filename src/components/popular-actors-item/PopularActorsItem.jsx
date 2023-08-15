@@ -1,5 +1,6 @@
 import React from 'react'
 import './popular-actors-item.scss'
+import { Link } from 'react-router-dom';
 
 const PopularActorsItem = ({ actor }) => {
 
@@ -8,12 +9,14 @@ const PopularActorsItem = ({ actor }) => {
     : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png';
 
   return (
-    <div className='popular-actor__item'>
-      <div className='popular-actor__item-image'>
-        <img src={imageUrl} alt={actor.name} />
+    <Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to={`/actor/${actor.id}`}>
+      <div className='popular-actor__item'>
+        <div className='popular-actor__item-image'>
+          <img src={imageUrl} alt={actor.name} />
+        </div>
+        <h3 style={{ color: 'whitesmoke', fontSize: '25px', paddingTop: '7px' }}>{actor.name}</h3>
       </div>
-      <h3 style={{ color: 'whitesmoke', fontSize: '25px', paddingTop: '7px' }}>{actor.name}</h3>
-    </div>
+    </Link>
   )
 }
 

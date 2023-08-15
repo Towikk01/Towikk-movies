@@ -18,7 +18,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const fav = useSelector(selectFavoriteFilms)
   const [searchText, setSearchText] = useState('')
-  console.log(searchText)
+
 
 
 

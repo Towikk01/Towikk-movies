@@ -30,6 +30,13 @@ const filmsSlice = createSlice({
       loading: true,
       error: false
     },
+    currentActor: {
+      data: [],
+      loading: true,
+      error: false,
+      images: [],
+      cast: []
+    },
     popularActors: {
       data: [],
       loading: true,
@@ -40,14 +47,47 @@ const filmsSlice = createSlice({
       error: false,
       loading: true
     },
+    genreSearched: {
+      data: [],
+      error: false,
+      loading: true,
+    },
     searchText: '',
     currentPage: 1,
     totalPages: 0,
     currentIndex: 0,
     paginationUrl: '',
-    apiKey: 'c20c870a9997852e1d7423c5e9069153'
+    apiKey: 'c20c870a9997852e1d7423c5e9069153',
+    genres: [],
   },
   reducers: {
+    setGenreSearchedResult: (state, action) => {
+      state.genreSearched.data = action.payload
+    },
+    setGenreSearchedError: (state, action) => {
+      state.genreSearched.error = action.payload
+    },
+    setGenreSearchedLoading: (state, action) => {
+      state.genreSearched.loading = action.payload
+    },
+    setCurrentActorResult: (state, action) => {
+      state.currentActor.data = action.payload
+    },
+    setCurrentActorImages: (state, action) => {
+      state.currentActor.images = action.payload
+    },
+    setCurrentActorError: (state, action) => {
+      state.currentActor.error = action.payload
+    },
+    setCurrentActorLoading: (state, action) => {
+      state.currentActor.loading = action.payload
+    },
+    setCurrentActorCast: (state, action) => {
+      state.currentActor.cast = action.payload
+    },
+    setGenres: (state, action) => {
+      state.genres = action.payload;
+    },
     setPopularFilmsResult: (state, action) => {
       state.popularFilms.data = action.payload;
     },
@@ -186,10 +226,27 @@ export const selectTopRatedResult = state => state.films.topRated.data;
 export const selectTopRatedLoading = state => state.films.topRated.loading;
 export const selectTopRatedError = state => state.films.topRated.error;
 
+
+export const selectCurrentActorResult = state => state.films.currentActor.data;
+export const selectCurrentActorLoading = state => state.films.currentActor.loading;
+export const selectCurrentActorError = state => state.films.currentActor.error;
+export const selectCurrentActorImages = state => state.films.currentActor.images;
+export const selectCurrentActorCast = state => state.films.currentActor.cast;
+
+
+
+
+export const selectGenreSearchedResult = state => state.films.genreSearched.data;
+export const selectGenreSearchedLoading = state => state.films.genreSearched.loading;
+export const selectGenreSearchedError = state => state.films.genreSearched.error;
+export const selectGenres = state => state.films.genres;
+
+
+
 export const selectPaginationUrl = state => state.films.paginationUrl;
 export const selectApiKey = state => state.films.apiKey;
 
 
-export const { setPopularFilmsResult, setFavoriteFilms, setCurrentFilm, setCurrentFilmLoading, setCurrentFilmError, setSearchResult, setSearchResultError, setSearchResultLoading, addToFavoriteFilms, removeFromFavoriteFilms, updateSearchText, setCurrentPage, setTotalPages, setMovieCreditsError, setMovieCreditsLoading, setMovieCreditsResult, setNextSlide, setPrevSlide, setMovieImages, setMovieImagesError, setMovieImagesLoading, setPopularActors, setPopularActorsError, setPopularActorsLoading, setTopRated, setTopRatedError, setTopRatedLoading, setPaginationUrl, setPopularFilmsError, setPopularFilmsLoading } = filmsSlice.actions;
+export const { setPopularFilmsResult, setFavoriteFilms, setCurrentFilm, setCurrentFilmLoading, setCurrentFilmError, setSearchResult, setSearchResultError, setSearchResultLoading, addToFavoriteFilms, removeFromFavoriteFilms, updateSearchText, setCurrentPage, setTotalPages, setMovieCreditsError, setMovieCreditsLoading, setMovieCreditsResult, setNextSlide, setPrevSlide, setMovieImages, setMovieImagesError, setMovieImagesLoading, setPopularActors, setPopularActorsError, setPopularActorsLoading, setTopRated, setTopRatedError, setTopRatedLoading, setPaginationUrl, setPopularFilmsError, setPopularFilmsLoading, setGenreSearchedError, setGenreSearchedLoading, setGenreSearchedResult, setGenres, setCurrentActorError, setCurrentActorLoading, setCurrentActorResult, setCurrentActorImages, setCurrentActorCast } = filmsSlice.actions;
 
 export default filmsSlice.reducer;
