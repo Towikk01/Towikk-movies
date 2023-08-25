@@ -102,7 +102,7 @@ const ActorPage = () => {
             {cast.map((cast) => (
               <Link className='text-decoration-none' to={`/${cast.id}`}>
                 <div>
-                  <img className='carousel-container__img' src={imageUrl} alt={cast.id} />
+                  <img className='carousel-container__img' src={`https://image.tmdb.org/t/p/w500${cast.poster_path}`} alt={cast.id} />
                   <h5 style={{ paddingTop: '0.5rem', color: 'whitesmoke' }}>{cast.title}</h5>
                 </div>
               </Link>
