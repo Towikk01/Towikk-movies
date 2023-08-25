@@ -5,6 +5,47 @@
   flex-direction: column;
   padding-top: 2rem;
 
+  &__carousel-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+      text-wrap: wrap;
+    }
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__image {
+
+    width: 10vw;
+    border-radius: 10px;
+
+    @media(max-width:374px) {
+      width: 90vw;
+    }
+
+  }
+
+  &__popular-movies {
+    width: 90%;
+
+
+  }
+
+
+
+  &__header {
+
+    @media(max-width:374px) {
+      font-size: 20px;
+    }
+  }
+
 
   &__carousel {
     display: flex;
@@ -15,23 +56,59 @@
     gap: 15px;
     max-width: 1475px;
     margin: 0 auto;
+
+    @media(max-width:374px) {
+      flex-direction: column;
+    }
   }
 
 
   &__wrapper {
     display: flex;
     gap: 5rem;
+
+    @media(min-width:1439px) {
+      gap: 1rem;
+    }
   }
 
   &__actions {
     gap: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    width: 90vw;
+
+    @media(max-width:1919px) {
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%
+    }
+
+    @media(max-width:1023px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      width: 90vw;
+    }
+
+    @media(max-width:767px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media(max-width:374px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
   }
 
   &__title {
     font-size: 50px;
     color: whitesmoke;
+
+    @media(max-width:374px) {
+      font-size: 35px;
+    }
   }
 
   &__details {
@@ -43,10 +120,22 @@
     width: 400px;
     height: 400px;
 
+    @media(max-width:1919px) {
+      width: 20vw;
+    }
+
+    @media(max-width:1439px) {
+      display: none;
+    }
+
     img {
       border-radius: 50%;
       width: 100%;
       object-fit: cover;
     }
   }
+}
+
+.text-nowrap {
+  text-align: center;
 }

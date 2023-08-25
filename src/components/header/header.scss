@@ -11,3 +11,13 @@
 
 
 }
+
+.logo {
+
+  transition: .5s;
+
+
+  &:hover {
+    color: hotpink
+  }
+}

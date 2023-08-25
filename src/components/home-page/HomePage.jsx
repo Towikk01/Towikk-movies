@@ -16,6 +16,8 @@ const HomePage = () => {
   const films = useSelector(selectPopularFilmsResult)
   const dispatch = useDispatch();
   const apiKey = useSelector(selectApiKey)
+
+
   const buttonList = [
     {
       name: 'Action',
@@ -142,10 +144,7 @@ const HomePage = () => {
         <p className='home-page__details'>Here you can found details and information about all kinds of films, also create your favorite list and see something about actors</p>
       </div>
       <div className='home-page__wrapper'>
-        <div className='home-page__img'>
-          <img src={logo} alt='logo' />
-        </div>
-        <div>
+        <div className='home-page__main'>
           <h3 style={{ color: 'whitesmoke' }}>Search movies for genre!</h3>
           <div className='home-page__actions'>
             {
@@ -168,8 +167,8 @@ const HomePage = () => {
         <div className='home-page__carousel'>
           {films.map(film => (
             <Link style={{ textDecoration: 'none', color: 'whitesmoke' }} to={`/${film.id}`}>
-              <div>
-                <img style={{ width: '10vw', borderRadius: '10px' }} src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.id} />
+              <div className='home-page__carousel-item'>
+                <img className='home-page__image' src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.id} />
                 <h5 style={{ paddingTop: '0.5rem' }}>{film.title}</h5>
               </div>
             </Link>

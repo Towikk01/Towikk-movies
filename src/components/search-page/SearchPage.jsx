@@ -55,14 +55,12 @@ const SearchPage = () => {
   return (
     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
       <img className='demo-bg' src='https://m.media-amazon.com/images/I/9111XWh5jRL._AC_UF1000,1000_QL80_.jpg' alt='background' />
-      <h1 style={{ color: 'whitesmoke', paddingTop: '1rem', textAlign: 'left' }}>Searched films</h1>
-      <Row xs={1} sm={2} md={3} lg={4} className='g-4 movies-container'>
+      <h1 style={{ color: 'whitesmoke', paddingTop: '1rem', textAlign: 'center' }}>Searched films</h1>
+      <div className='search-list'>
         {searchResult.map((film) => (
-          <Col key={film.id}>
-            <FilmItem film={film} />
-          </Col>
+          <FilmItem film={film} />
         ))}
-      </Row>
+      </div>
       <Pagination />
     </div>
   );

@@ -27,7 +27,7 @@ const FilmItem = ({ film }) => {
   const isFilmFav = favorites.some(e => e.id === film.id)
 
   return (
-    <Card style={{ width: '18rem', position: 'relative' }}>
+    <Card className='card' style={{ position: 'relative' }}>
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body className='d-flex flex-column justify-content-between'>
         <div>
@@ -40,7 +40,7 @@ const FilmItem = ({ film }) => {
           <Link className='text-decoration-none' to={`/${film.id}`}>
             <Button variant="primary">Film page</Button>
           </Link>
-          <Button onClick={handleAddToFavorites} variant={isFilmFav ? 'warning' : 'success'}>
+          <Button style={{ padding: '5px' }} onClick={handleAddToFavorites} variant={isFilmFav ? 'warning' : 'success'}>
             {isFilmFav ? 'Remove' : "Add"}<AiFillStar />
           </Button>
         </div>

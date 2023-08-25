@@ -5,6 +5,8 @@ import { setCurrentActorError, setCurrentActorLoading, selectCurrentActorLoading
 import { Spinner, Card } from 'react-bootstrap';
 import { AiFillStar } from 'react-icons/ai';
 import './actor-page.scss';
+import background from '../../assets/fvhvvx1wm6u71.jpg'
+import { Link } from 'react-router-dom';
 
 const ActorPage = () => {
   const { personId } = useParams();
@@ -18,7 +20,12 @@ const ActorPage = () => {
   const images = useSelector(selectCurrentActorImages)
 
 
+  const imageUrl = cast?.poster_path !== null
+    ? `https://image.tmdb.org/t/p/w500${cast.poster_path}`
+    : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png';
 
+
+  console.log(cast)
 
   useEffect(() => {
     if (personId) {
@@ -60,12 +67,9 @@ const ActorPage = () => {
 
 
 
-  const imageUrl = actor?.profile_path !== null
-    ? `https://image.tmdb.org/t/p/w500${actor.poster_path}`
-    : 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png';
   return (
     <div className="actor-page">
-      <img className='demo-bg' src={`https://image.tmdb.org/t/p/w500${actor?.backdrop_path} `} alt={actor?.backdrop_path} />
+      <img className='demo-bg' src={background} alt={actor?.backdrop_path} />
       <div className="actor-image">
         <Card.Img src={`https://image.tmdb.org/t/p/w500${actor?.profile_path}`} alt={actor.name} style={{ width: '100%', height: '100%' }} />
       </div>
@@ -88,7 +92,7 @@ const ActorPage = () => {
           <h2 style={{ textAlign: 'left', paddingTop: '2rem' }}>Images</h2>
           <div className="carousel-container">
             {images.map((image) => (
-              <img style={{ width: '10vw', borderRadius: '10px' }} src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={image.index} />
+              <img className='carousel-container__image' src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={image.index} />
             ))}
           </div>
         </div>
@@ -96,10 +100,12 @@ const ActorPage = () => {
           <h2 style={{ textAlign: 'left', paddingTop: '2rem' }}>Cast</h2>
           <div className="carousel-container">
             {cast.map((cast) => (
-              <div>
-                <img style={{ width: '20vw', borderRadius: '10px' }} src={`https://image.tmdb.org/t/p/w500${cast?.backdrop_path}`} alt={cast.id} />
-                <h5 style={{ paddingTop: '0.5rem' }}>{cast.title}</h5>
-              </div>
+              <Link className='text-decoration-none' to={`/${cast.id}`}>
+                <div>
+                  <img className='carousel-container__img' src={imageUrl} alt={cast.id} />
+                  <h5 style={{ paddingTop: '0.5rem', color: 'whitesmoke' }}>{cast.title}</h5>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

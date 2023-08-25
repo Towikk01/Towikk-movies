@@ -8,14 +8,18 @@
   max-width: 1400px;
   margin: 0 auto;
 
+  @media (max-width:1439px) {}
 
   @media (max-width:1023px) {
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
   }
 
   @media (max-width:767px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media(max-width:374px) {
+    width: 100%;
   }
 
 }
@@ -24,14 +28,11 @@
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 2rem;
+  width: 90%;
 
   h1 {
     color: whitesmoke;
-    text-align: left;
-
-    @media (max-width:374px) {
-      text-align: center;
-    }
+    text-align: center;
   }
 
 }

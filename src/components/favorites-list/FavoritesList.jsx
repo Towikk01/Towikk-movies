@@ -13,7 +13,7 @@ const FavoritesList = () => {
     }}>
       <img className='demo-bg' src='https://images.unian.net/photos/2018_04/thumb_files/1000_545_1523533032-4732.jpg?1' alt='background' />
       <h1 style={{ color: 'whitesmoke', paddingTop: '1rem', textAlign: "left" }}>Favorite films</h1>
-      <div className='favorites-list' style={favorites.length ? { gridTemplateColumns: 'repeat(4, 3fr)' } : { gridTemplateColumns: 'auto' }}>
+      <div className='favorites-list'>
         {favorites.length ?
           (favorites.map(film => (
             <FilmItem film={film} />

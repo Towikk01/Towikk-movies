@@ -38,7 +38,7 @@ const FilmList = () => {
   return (
     <div className='film-wrapper'>
       <img className='demo-bg' src='https://images.unian.net/photos/2018_04/thumb_files/1000_545_1523533032-4732.jpg?1' alt='background' />
-      <h1>Popular films</h1>
+      <h1 style={{ textAlign: 'center' }}>Popular films</h1>
       <div className='film-list'>
         {films?.map(film => <FilmItem film={film} key={film.id} />)}
       </div>
