@@ -119,7 +119,7 @@ const FilmPage = () => {
           <h2 style={{ textAlign: 'left', paddingTop: '2rem' }}>Images</h2>
           <div className="carousel-container">
             {images.map((image, index) => (
-              <img key={image.id} className='caroustel-container__img' src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={image.index} />
+              <img key={image.id} style={{ width: '100%' }} className='carousel-container__img' src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={image.index} />
             ))}
           </div>
         </div>
