@@ -49,17 +49,17 @@ const Header = () => {
                 <Button variant="info">Search</Button>
               </Link>
             </Form>
-            <Nav
-              className=" my-2 my-lg-0"
-              style={{ maxHeight: '100px', position: 'absolute', top: '10%', right: '100px' }}
-              navbarScroll>
-              <Link style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }} to='/favorites'>
-                <Nav.Link style={{ color: "#000" }} href="#action1">Favorites:
-                </Nav.Link>
-                <span className='numbers' style={{ backgroundColor: fav.length ? 'hotpink' : '#2d3d43', color: fav.length ? '#130e0e' : 'hotpink' }}>{fav.length ? fav.length : 0}</span>
-              </Link>
-            </Nav>
           </Navbar.Collapse>
+          <div
+            className=" my-2 my-lg-0 favorites-container"
+            style={{ maxHeight: '100px', position: 'absolute', top: '10%' }}
+            navbarScroll>
+            <Link style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }} to='/favorites'>
+              <Nav.Link style={{ color: "#000" }} href="#action1">Favorites:
+              </Nav.Link>
+              <span className='numbers' style={{ backgroundColor: fav.length ? 'hotpink' : '#2d3d43', color: fav.length ? '#130e0e' : 'hotpink' }}>{fav.length ? fav.length : 0}</span>
+            </Link>
+          </div>
         </Container>
       </Navbar>
     </header >

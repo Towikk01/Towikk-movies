@@ -21,3 +21,39 @@
     color: hotpink
   }
 }
+
+.favorites-container {
+
+
+  position: relative;
+
+  top: 10px !important;
+
+  right: 20px;
+  text-align: right;
+
+
+  @media(max-width:1023px) {
+
+    position: relative;
+
+    top: 0 !important;
+
+    right: 20px;
+    text-align: right;
+  }
+
+
+
+  .container-fluid {
+
+    @media(max-width:767px) {
+      justify-content: space-between !important;
+    }
+
+    @media(max-width:374px) {
+      justify-content: start !important;
+    }
+
+  }
+}
