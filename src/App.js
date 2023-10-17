@@ -1,5 +1,4 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header';
 import FilmList from './components/film-list/FilmList'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -14,11 +13,7 @@ import ActorPage from './components/actor-page/ActorPage';
 
 
 
-
 function App() {
-
-
-
   return (
     <Router>
       <div className="App">

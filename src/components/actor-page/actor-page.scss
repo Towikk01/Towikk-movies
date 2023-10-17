@@ -1,170 +1,178 @@
 .actor-page {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  width: 90vw;
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 90vw;
 
-  @media(max-width:767px) {
-    flex-direction: column;
-    align-items: center;
-  }
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .actor-details {
-  width: 65%;
-  padding: 20px;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
+	width: 65%;
+	padding: 20px;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
 
-  @media(max-width:374px) {
-    width: 100%;
-  }
+	@media (max-width: 1023px) {
+		width: 90%;
+	}
+	@media (max-width: 374px) {
+		width: 100%;
+	}
 }
 
 .actor-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-
+	font-size: 2rem;
+	margin-bottom: 10px;
 }
 
 .actor-rating {
-  font-weight: bold;
-  margin-bottom: 10px;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .actor-description {
-  margin-bottom: 20px;
-  text-align: left;
-  font-size: 16px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 19px;
 }
 
 .actor-image {
-  width: 35%;
-  height: 100%;
-  padding: 20px;
+	width: 35%;
+	height: 100%;
+	padding: 20px;
 
-  @media(max-width:1023px) {
-    width: 100%;
-  }
+	@media (max-width: 1023px) {
+		width: 100%;
+	}
 }
 
 .actor-image img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .actor-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-size: 22px;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 22px;
+	gap: 1rem;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 .actor-genres {
-  display: flex;
-  gap: 10px;
-
+	display: flex;
+	gap: 10px;
 }
 
 .actor-genres__item {
-  background-color: darkgrey;
-  border-radius: 50px;
-  padding: 10px;
-  color: black;
+	background-color: darkgrey;
+	border-radius: 50px;
+	padding: 10px;
+	color: black;
 }
 
 .demo-bg {
-
-  opacity: 0.1;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(7px);
-  z-index: -1;
+	opacity: 0.1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(7px);
+	z-index: -1;
 }
 
 .actor-actions button:hover:focus:active {
-  background-color: darkgray;
-  color: whitesmoke;
+	background-color: darkgray;
+	color: whitesmoke;
 }
 
 .actor-actions button {
-  transition: .5s;
+	transition: 0.5s;
 }
 
-
 .actor-actors-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .carousel-container {
-  display: flex;
-  gap: 10px;
-  white-space: nowrap;
-  overflow-x: scroll;
-  display: flex;
-  gap: 15px;
-  max-width: 1475px;
-  margin: 0 auto;
+	display: flex;
+	gap: 10px;
+	white-space: nowrap;
+	overflow-x: scroll;
+	display: flex;
+	gap: 15px;
+	margin: 0 auto;
 
-  &__image {
-    width: 10vw;
-    border-radius: 10px;
+	&__image {
+		width: 18.1vw;
+		border-radius: 10px;
 
-    @media(max-width:1023px) {
-      width: 20vw;
-    }
+		@media (max-width: 1919px) {
+			width: 18vw;
+		}
 
-    @media(max-width:767px) {
-      width: 100%;
-    }
-  }
+		@media (max-width: 1439px) {
+			width: 17.2vw;
+		}
+		@media (max-width: 1023px) {
+			width: 20vw;
+		}
+		@media (max-width: 1023px) {
+			width: 20vw;
+		}
 
-  &__img {
-    width: 10vw;
-    border-radius: 10px;
+		@media (max-width: 767px) {
+			width: 40vw;
+		}
+	}
 
-    @media(max-width:1919px) {}
+	&__img {
+		width: 18.1vw;
+		border-radius: 10px;
 
-    @media(max-width:767px) {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-    }
+		@media (max-width: 1919px) {
+			width: 18vw;
+		}
+		@media (max-width: 1439px) {
+			width: 17.2vw;
+		}
 
-    @media(max-width:374px) {
-      width: 200px;
-      height: 200px;
-    }
+		@media (max-width: 1023px) {
+			width: 25vw;
+		}
 
-    img {
-      height: 100%;
-      width: 100%;
+		@media (max-width: 767px) {
+			object-fit: contain;
+			width: 35vw;
+		}
 
-
-    }
-
-  }
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }
 
 .carousel-item {
-  width: 150px;
-  height: 150px;
+	width: 115px;
+	height: 115px;
 }

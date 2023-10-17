@@ -1,44 +1,40 @@
 .brand {
-  margin-right: 2rem;
+	margin-right: 2rem;
 }
 
 .numbers {
-  display: flex;
-  border-radius: 50px;
-  padding: 5px 10px;
-  color: darkgray;
-  transition: .7s;
-
-
+	display: flex;
+	border-radius: 50px;
+	padding: 5px 10px;
+	color: darkgray;
+	transition: 0.7s;
+	margin-left: 5px;
 }
 
 .logo {
+	transition: 0.5s;
 
-  transition: .5s;
-
-
-  &:hover {
-    color: hotpink
-  }
+	&:hover {
+		color: #a9a6a3;
+	}
 }
 
 .favorites-container {
-  position: relative;
-  top: 10px !important;
-  right: 20px;
-  text-align: right;
+	position: relative;
+	top: 10px !important;
+	right: 20px;
+	text-align: right;
 
-  @media(max-width:1023px) {
-    position: relative;
-    top: 0 !important;
-    right: 20px;
-    text-align: right;
-  }
+	@media (max-width: 1023px) {
+		position: relative;
+		top: 0 !important;
+		right: 20px;
+		text-align: right;
+	}
 }
 
-
 .container-fluid {
-  @media(max-width:1023px) {
-    justify-content: flex-start !important;
-  }
+	@media (max-width: 1023px) {
+		justify-content: flex-start !important;
+	}
 }

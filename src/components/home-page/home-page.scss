@@ -1,141 +1,154 @@
 .home-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 2rem;
 
-  &__carousel-item {
+	&__main {
+		width: 100%;
+	}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	&__image {
+		width: 10vw;
+		border-radius: 10px;
 
-    h5 {
-      text-wrap: wrap;
-    }
-  }
+		@media (max-width: 1919px) {
+			width: 14.1vw;
+		}
+		@media (max-width: 1439px) {
+			width: 14vw;
+		}
+		@media (max-width: 1023px) {
+			width: 16.5vw;
+		}
+		@media (max-width: 767px) {
+			width: 90vw;
+		}
+	}
 
-  &__main {
-    width: 100%;
-  }
+	&__popular-movies {
+		width: 90%;
+	}
 
-  &__image {
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-    width: 10vw;
-    border-radius: 10px;
+		@media (max-width: 374px) {
+			font-size: 20px;
+		}
+	}
 
-    @media(max-width:374px) {
-      width: 90vw;
-    }
+	&__carousel {
+		display: flex;
+		gap: 10px;
+		white-space: nowrap;
+		overflow-x: scroll;
+		display: flex;
+		gap: 15px;
 
-  }
+		margin: 0 auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
 
-  &__popular-movies {
-    width: 90%;
+		::-webkit-scrollbar {
+			width: 0 !important;
+		}
 
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-  }
+			h5 {
+				text-wrap: wrap;
+			}
+		}
 
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
 
+	&__wrapper {
+		display: flex;
+		gap: 5rem;
 
-  &__header {
+		@media (min-width: 1439px) {
+			gap: 1rem;
+		}
+	}
 
-    @media(max-width:374px) {
-      font-size: 20px;
-    }
-  }
+	&__actions {
+		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		width: 90vw;
 
+		@media (max-width: 1919px) {
+			gap: 1rem;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			width: 100%;
+		}
 
-  &__carousel {
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    overflow-x: scroll;
-    display: flex;
-    gap: 15px;
-    max-width: 1475px;
-    margin: 0 auto;
+		@media (max-width: 1023px) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+			width: 90vw;
+		}
 
-    @media(max-width:374px) {
-      flex-direction: column;
-    }
-  }
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.5rem;
+		}
 
+		@media (max-width: 374px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.5rem;
+		}
+	}
 
-  &__wrapper {
-    display: flex;
-    gap: 5rem;
+	&__title {
+		font-size: 50px;
+		color: whitesmoke;
+		width: 85%;
 
-    @media(min-width:1439px) {
-      gap: 1rem;
-    }
-  }
+		@media (max-width: 374px) {
+			font-size: 35px;
+		}
+	}
 
-  &__actions {
-    gap: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 90vw;
+	&__details {
+		color: rgb(235, 217, 217);
+		width: 90%;
+		padding: 15px;
+		text-align: center;
+		margin: 0;
+	}
 
-    @media(max-width:1919px) {
-      gap: 1rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%
-    }
+	&__img {
+		width: 400px;
+		height: 400px;
 
-    @media(max-width:1023px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      width: 90vw;
-    }
+		@media (max-width: 1919px) {
+			width: 20vw;
+		}
 
-    @media(max-width:767px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-    }
+		@media (max-width: 1439px) {
+			display: none;
+		}
 
-    @media(max-width:374px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
-    }
-  }
-
-  &__title {
-    font-size: 50px;
-    color: whitesmoke;
-
-    @media(max-width:374px) {
-      font-size: 35px;
-    }
-  }
-
-  &__details {
-    color: rgb(235, 217, 217)
-  }
-
-
-  &__img {
-    width: 400px;
-    height: 400px;
-
-    @media(max-width:1919px) {
-      width: 20vw;
-    }
-
-    @media(max-width:1439px) {
-      display: none;
-    }
-
-    img {
-      border-radius: 50%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+		img {
+			border-radius: 50%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
 }
 
 .text-nowrap {
-  text-align: center;
+	text-align: center;
 }

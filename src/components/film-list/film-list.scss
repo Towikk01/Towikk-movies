@@ -1,38 +1,38 @@
 .film-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 2rem;
-  margin: 2rem auto;
-  gap: 1rem;
-  padding-top: 1rem;
-  max-width: 1400px;
-  margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 2rem;
+	margin: 2rem auto;
+	gap: 1rem;
+	padding-top: 1rem;
+	max-width: 1400px;
+	margin: 0 auto;
 
-  @media (max-width:1439px) {}
+	@media (max-width: 1439px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-  @media (max-width:1023px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+	@media (max-width: 1023px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-  @media (max-width:767px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
-  @media(max-width:374px) {
-    width: 100%;
-  }
-
+	@media (max-width: 374px) {
+		width: 100%;
+	}
 }
 
 .film-wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-top: 2rem;
+	width: 90%;
 
-  h1 {
-    color: whitesmoke;
-    text-align: center;
-  }
-
+	h1 {
+		color: whitesmoke;
+		text-align: center;
+	}
 }
